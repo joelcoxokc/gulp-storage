@@ -23,10 +23,14 @@ npm install --save-dev gulp-storage
 Then, add it to your `gulpfile.js`:
 
 ```javascript
+// require gulp
+var gulp = require('gulp');
+
 // Do this
-var storage = require('gulp-storage');
+var storage = require('gulp-storage')(gulp);
+
 // or do this
-require('gulp-storage')
+require('gulp-storage')(gulp);
 
 gulp.storage.create('SomeName', 'somName.json');
 
