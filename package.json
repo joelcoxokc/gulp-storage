@@ -1,16 +1,15 @@
 {
   "name": "gulp-storage",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A plugin for Gulp",
   "keywords": [
     "gulpplugin"
   ],
-  "author": {
-    "name": "Joel Cox",
-    "email": "joelcox@hisimagination.com",
-    "url": "https://github.com/joelcoxokc"
+  "author": "Joel Cox <joelcox@hisimagination.com> (https://github.com/joelcoxokc)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JoelCoxOKC/gulp-storage"
   },
-  "repository": "JoelCoxOKC/gulp-storage",
   "scripts": {
     "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
@@ -33,5 +32,13 @@
     "node": ">=0.8.0",
     "npm": ">=1.2.10"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoelCoxOKC/gulp-storage/issues"
+  },
+  "homepage": "https://github.com/JoelCoxOKC/gulp-storage",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  }
 }
