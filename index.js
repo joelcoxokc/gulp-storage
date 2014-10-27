@@ -53,7 +53,7 @@
         var __this = this;
 
         if( key && _.isString( key )  ){
-          return __this.__configuration.get( key, val );
+          return __this.__configuration.get( key );
         }
         return __this.__configuration.getAll();
       };
