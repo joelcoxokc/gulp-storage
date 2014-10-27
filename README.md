@@ -1,4 +1,4 @@
-(PLUGIN AUTHOR: Please read [Plugin README conventions](https://github.com/wearefractal/gulp/wiki/Plugin-README-Conventions), then delete this line)
+<!-- (PLUGIN AUTHOR: Please read [Plugin README conventions](https://github.com/wearefractal/gulp/wiki/Plugin-README-Conventions), then delete this line) -->
 
 # gulp-storage
 <!-- [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url] -->
@@ -8,8 +8,8 @@
 
 # Features
 
-- Gulp Storage uses Yeoman-Generator's storage plugin to simply save co nfigurations in a local JSON file. 
-- Bind's a storage property the the gulp instance. 
+- Gulp Storage uses Yeoman-Generator's storage plugin to simply save configurations in a local JSON file. 
+- Bind's a storage property to the the gulp instance. 
 - Within any gulp task, you can access the storage property by calling this.storage.
 
 ## Usage
@@ -46,19 +46,22 @@ gulp.task('anotherTask', function(){
 ### storage.create( name, fileName );
 
 #### name
-Type: `String`  
-Default: `myApp`
-Required: true
+- Type: `String`  
+- Default: `myApp`
+- Required: `true`
 
-The the name will be the root object property for anything set in your storage.
+The `name` property will be the root object key for anything set in your local storage file.
 
 #### fileName
-Type: `String`
-Default: `myApp.json`
-Required: `true`
-extension: `.json`
+- Type: `String`
+- Default: `myApp.json`
+- Required: `true`
+- extension: `.json`
 
-The Storage will create a Json file, using the specified name;
+The gulp-storage will create a Json file in your local directory, using the specified name;
+
+*Note* If you are using gulp-storage with a SlushJS Generator, gulp-storage will create the `json` file in the generated directory.
+The path will be `process.cwd();`
 
 
 ### storage.set( key, value );
@@ -71,7 +74,7 @@ Required: `true`
 Type: `String`  
 Required: `true`
 
-storage.set will set a new property in your json local storage file.
+storage.set will set a new property in your local storage file.
 
 ### storage.get( key );
 
@@ -79,9 +82,9 @@ storage.set will set a new property in your json local storage file.
 Type: `String` 
 Required: `false`
 
-storage.get will retreive values from your local json storage file.
+storage.get will retreive values from your local storage file.
 - You can pass a key property to get a specific value.
-- If no key is specified, storage.get will return the everything in your local storage file.
+- If no key is specified, storage.get will return everything in your local storage file.
 
 ### storage.store( object );
 
@@ -89,12 +92,12 @@ storage.get will retreive values from your local json storage file.
 Type: `Object`
 Required: `true`
 
-storage.store will storage all properties and values within the object in your local storage file.
+storage.store will set all properties and values within the object in your local storage file.
 
 
 ## TODO
-- Create a storage.clear(); `Delete everything`
-- Create a storage.delete( key ); `Delete a specific property`
+- Create a storage.clear(); ` // Delete everything`
+- Create a storage.delete( key ); ` // Delete a specific property`
 
 ## License
 
