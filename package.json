@@ -1,9 +1,16 @@
 {
   "name": "gulp-storage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A plugin for Gulp",
   "keywords": [
-    "gulpplugin"
+    "gulpplugin",
+    "gulp",
+    "config",
+    "sorage",
+    "util",
+    "gulp-util",
+    "json",
+    "configuration"
   ],
   "author": "Joel Cox <joelcox@hisimagination.com> (https://github.com/joelcoxokc)",
   "repository": {
